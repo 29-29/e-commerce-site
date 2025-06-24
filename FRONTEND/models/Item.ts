@@ -3,4 +3,5 @@ export interface Item {
 	name: string
 	stars: number
 	price: number
+	imagePath: string
 }
