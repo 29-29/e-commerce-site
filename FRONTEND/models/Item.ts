@@ -1,7 +1,7 @@
 export interface Item {
 	id: number
-	name: string
+	title: string
 	stars: number
 	price: number
-	imagePath: string
+	image: string
 }
