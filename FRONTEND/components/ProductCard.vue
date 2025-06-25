@@ -7,11 +7,13 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div class="p-3 inline-block border border-gray-200 shadow-lg rounded-md">
-		<img :src="`/images/${props.item.imagePath}.avif`" />
+	<UCard variant="solid" class="flex flex-col justify-between">
+	<!-- <div class="p-3 w-full h-full inline-block border border-gray-200 shadow-lg flex flex-col flex-grow justify-between"> -->
+		<img :src="props.item.image" class="aspect-square w-full object-contain" />
 		<div class="px-1 py-1">
-			<h3 class="text-lg font-semibold">{{ props.item.name }}</h3>
+			<h3 class="text-lg font-semibold">{{ props.item.title }}</h3>
 			<p>₱{{ props.item.price }}</p>
 		</div>
-	</div>
+	</UCard>
+	<!-- </div> -->
 </template>
