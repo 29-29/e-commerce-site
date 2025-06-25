@@ -1,7 +1,7 @@
 export interface Item {
 	id: number
 	title: string
-	stars: number
+	rating: number
 	price: number
-	image: string
+	images: string[]
 }

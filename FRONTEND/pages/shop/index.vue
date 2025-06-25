@@ -2,7 +2,7 @@
 
 import type { Item } from '~/models/Item';
 
-const { products, error, pending } = await useProducts();
+const products = await useProducts();
 
 </script>
 

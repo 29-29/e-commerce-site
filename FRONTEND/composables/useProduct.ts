@@ -1,7 +1,7 @@
 import type { Item } from "~/models/Item"
 
 export const useProducts = async() => {
-	const { data, error, pending } = await useFetch('https://fakestoreapi.com/products/category/men\'s clothing')
+	const { data, error, pending } = await useFetch<{ products: Item[] }>('https://dummyjson.com/products/category/smartphones')
 
-	return { products: data, error, pending }
+	return data.value?.products
 }
