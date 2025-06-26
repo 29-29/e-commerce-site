@@ -1,9 +1,11 @@
+const cors = require('cors')
 const express = require('express');
 const {User} = require('./models');
 require('dotenv').config()
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get('/users', async(req, res) => {
