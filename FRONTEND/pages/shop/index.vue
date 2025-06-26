@@ -2,13 +2,13 @@
 
 import type { Item } from '~/models/Item';
 
-const products = await useProducts();
+const { data } = await useProducts();
 
 </script>
 
 <template>
 	<div>
 		<!-- <h2 class="my-3 text-3xl font-semibold text-center">Shop</h2> -->
-		<ProductList :items="<Item[]>products" />
+		<ProductList :items="<Item[]>data?.products" />
 	</div>
 </template>
