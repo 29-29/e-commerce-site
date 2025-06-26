@@ -7,14 +7,15 @@ const props = defineProps<{
 </script>
 
 <template>
-	<UCard variant="solid" class="flex flex-col">
+	<UCard variant="subtle" class="flex flex-col">
 	<!-- <div class="p-3 w-full h-full inline-block border border-gray-200 shadow-lg flex flex-col flex-grow justify-between"> -->
 		<img :src="props.item.images[0]" class="aspect-square w-full object-contain" />
 		<div class="px-1 py-1">
 			<h3 class="truncate text-lg font-semibold">{{ props.item.title }}</h3>
-			<div class="flex items-center gap-2" style="width: 50%;">
+			<div class="flex items-center gap-2 text-primary" style="width: 50%;">
 				<UProgress v-model="props.item.rating" :max="5" />
-				<span class="text-primary">{{ props.item.rating }}</span>
+				<span>{{ props.item.rating }}</span>
+				<UIcon name="i-lucide-star" class="size-7" />
 			</div>
 			<p class="text-green-700 font-bold">${{ props.item.price }}</p>
 		</div>
