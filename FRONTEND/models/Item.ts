@@ -4,7 +4,7 @@ export interface Item {
 	rating: number //
 	price: number //
 	images: string[] //
-	category: string
+	category: string //
 	description: string //
 	stock: number //
 }
