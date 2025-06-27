@@ -45,7 +45,12 @@ const accountItems = [
         <UNavigationMenu :items="items" :highlight="true" class="w-full border-gray-600" />
       </div>
       <div class="flex flex-row gap-2">
-        <UButton label="Cart" icon="i-lucide-shopping-cart" variant="ghost" />
+        <UButton
+          label="Cart"
+          icon="i-lucide-shopping-cart"
+          variant="ghost"
+          to="/cart"
+        />
         <UPopover>
           <UButton icon="i-lucide-circle-user-round" variant="ghost" />
           <template #content>
